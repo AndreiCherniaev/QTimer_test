@@ -6,7 +6,7 @@ Rial::Rial(QObject *parent)
 {
     connect(&tim, &QTimer::timeout, this, &Rial::closeApp);
     tim.start(3000);
-    QObject().thread()->sleep(5);
+    QObject().thread()->sleep(5); //for(volatile quint64 i=0;i<10000000000;i++);
 }
 
 void Rial::closeApp(){
